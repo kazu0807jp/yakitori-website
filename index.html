@@ -1,30 +1,359 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>焼き鳥にかわ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焼鳥 にかわ | Yakitori Nikawa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-   <h1>焼き鳥にかわ</h1>
-   <p>伊勢の焼き鳥店へようこそ。</p>
-   <p>完全予約制・コース料理のみ</p>
-   <p>全7席</p>
 
-   <h2>店舗情報</h2>
-   <p>三重県伊勢市一之木2-5-10</p>
-   <p>電話：<a href="tel:0596222336">0596-22-2336</a></p>
-   <p>営業時間：17:00〜23:00</p>
+<header class="site-header">
+  <a href="#" class="site-logo">
+    <span data-ja="焼鳥 にかわ" data-en="Yakitori Nikawa">焼鳥 にかわ</span>
+  </a>
 
-   <h2>お品書き</h2>
-   <p>焼き鳥コース</p>
-   <p>料金：8,000円</p>
+  
+<nav class="site-nav">
+  <a href="#concept">
+    <span data-ja="コンセプト" data-en="Concept">コンセプト</span>
+  </a>
+  <a href="#space">
+    <span data-ja="店内の空間" data-en="Our Space">店内の空間</span>
+  </a>
+  <a href="#menu">
+    <span data-ja="お品書き" data-en="Menu">お品書き</span>
+  </a>
+  <a href="#access">
+    <span data-ja="店舗情報" data-en="Information">店舗情報</span>
+  </a>
+</nav>
 
-   <h2>アクセス</h2>
-   <p>三重県伊勢市一之木2-5-10</p>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.325878979663!2d136.7033260755145!3d34.49462177299361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60045af4476262ad%3A0x2a3f85bccb2ead4f!2z54S86bOl44Gr44GL44KP!5e0!3m2!1sja!2suk!4v1791552093430!5m2!1sja!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-   <a href="tel:0596222336" class="reservation-button">予約する</a>
+  <div class="language-switch">
+    <button type="button" class="language-button active" data-lang="ja">JP</button>
+    <span>/</span>
+    <button type="button" class="language-button" data-lang="en">EN</button>
+  </div>
+
+  <a href="#reservation-options" class="header-reservation"
+     data-ja="ご予約" data-en="Reservations">ご予約</a>
+</header>
+
+  <section class="hero">
+    <p class="hero-label">ISE, MIE · JAPAN</p>
+
+    <h1>
+      <span data-ja="焼鳥 にかわ" data-en="Yakitori Nikawa">焼鳥 にかわ</span>
+    </h1>
+
+    <p class="hero-copy"
+       data-ja="一串一串に、心を込めて。"
+       data-en="Crafted with care, one skewer at a time.">
+      一串一串に、心を込めて。
+    </p>
+
+    <p class="hero-description"
+       data-ja="伊勢の地で、焼鳥と向き合うひとときを。"
+       data-en="Enjoy a special moment with yakitori in Ise.">
+      伊勢の地で、焼鳥と向き合うひとときを。
+    </p>
+
+    <a href="tel:0596222336"
+       class="reservation-button"
+       data-ja="お電話でお問い合わせ"
+       data-en="Call to enquire">
+      お電話でお問い合わせ
+    </a>
+   </section>
+
+
+<section class="concept" id="concept">
+  <p class="section-label">OUR CONCEPT</p>
+
+  <h2 data-ja="一串と向き合う、特別な時間。"
+      data-en="A special moment with every skewer.">
+    一串と向き合う、特別な時間。
+  </h2>
+
+  <p class="concept-text"
+     data-ja="素材の持ち味を大切に、一串ずつ丁寧に。<br>焼鳥を味わうひとときを、心ゆくまでお楽しみください。"
+     data-en="We carefully prepare each skewer to bring out the best in every ingredient.<br>Take your time and enjoy the experience of yakitori.">
+    素材の持ち味を大切に、一串ずつ丁寧に。
+    <br>
+    焼鳥を味わうひとときを、心ゆくまでお楽しみください。
+  </p>
+</section>
+
+
+<section class="space" id="space">
+  <p class="section-label">OUR SPACE</p>
+
+  <h2 data-ja="心落ち着く、くつろぎの空間。"
+      data-en="A calm and welcoming space.">
+    心落ち着く、くつろぎの空間。
+  </h2>
+
+  <p class="space-text"
+     data-ja="落ち着いた空間で、焼鳥と向き合うひとときを。 大切な方とのお食事にも、ゆっくりとお過ごしいただけます。"
+     data-en="Enjoy yakitori in a relaxed setting. Take your time over a meal with someone special.">
+    落ち着いた空間で、焼鳥と向き合うひとときを。<br>
+    大切な方とのお食事にも、ゆっくりとお過ごしいただけます。
+  </p>
+</section>
+
+
+<section class="menu" id="menu">
+  <p class="section-label">OUR MENU</p>
+
+  <h2 data-ja="お品書き" data-en="Menu">お品書き</h2>
+
+  <p class="menu-course" data-ja="焼鳥コース" data-en="Yakitori Course">
+    焼鳥コース
+  </p>
+
+  <p class="menu-price"
+     data-ja="13,000円"
+     data-en="¥13,000">
+    13,000円
+  </p>
+
+  <p class="menu-note"
+     data-ja="※ コース内容・料金は店舗への確認後に確定します。"
+     data-en="* Course details and prices should be confirmed with the restaurant.">
+    ※ コース内容・料金は店舗への確認後に確定します。
+  </p>
+</section>
+
+
+
+<section class="restaurant-details" id="access">
+  <!-- 左側：店舗の外観写真 -->
+  <div class="details-photo" role="img"
+       aria-label="焼鳥 にかわの外観"></div>
+
+  <!-- 右側：店舗情報 -->
+  <div class="details-content">
+
+    <section class="access-info">
+      <p class="section-label">INFORMATION</p>
+      <h2 data-ja="店舗情報" data-en="Restaurant Information">
+        店舗情報
+      </h2>
+
+      <div class="info-row">
+        <span class="info-label">店名</span>
+        <span>焼鳥 にかわ</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">住所</span>
+        <span>三重県伊勢市一之木2-5-10</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">アクセス</span>
+        <span>JR東海・近鉄線 伊勢市駅から徒歩8分</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">電話</span>
+        <a href="tel:0596222336">0596-22-2336</a>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">営業時間</span>
+        <span>
+          18:00 一斉スタート<br>
+          遅刻のないようご来店ください。<br><br>
+          空席状況により、20:45から串中心のコースも可能です。
+          （3名様以上）
+        </span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">定休日</span>
+        <span>不定休</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">お支払い</span>
+        <span>
+          テーブル会計・レジ会計<br>
+          VISA / Master / JCB / American Express / Diners<br>
+          QRコード決済不可<br>
+          サービス料・席料なし
+        </span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">席数</span>
+        <span>7席</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">喫煙</span>
+        <span>全席禁煙</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">お子様</span>
+        <span>19歳以下のお客様はご利用いただけません。</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">ペット</span>
+        <span>同伴不可</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">駐車場</span>
+        <span>店舗前に3台分</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">アレルギー</span>
+        <span>苦手な食材やアレルギーが多い場合は、事前にご相談ください。</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">服装</span>
+        <span>香りの強い香水はお控えください。</span>
+      </div>
+
+      <p class="small-note">
+        お電話でのご予約は、一休ポイント付与の対象外です。
+      </p>
+    </section>
+
+    <!-- キャンセルポリシー -->
+    <section class="cancellation">
+      <p class="section-label">CANCELLATION POLICY</p>
+      <h2>キャンセルポリシー</h2>
+
+      <h3>予約取消</h3>
+      <div class="info-row">
+        <span class="info-label">7～4日前</span>
+        <span>ご予約料金の50%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">3日前</span>
+        <span>ご予約料金の100%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">2日前以降</span>
+        <span>00:00以降は100%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">前日以降</span>
+        <span>00:00以降は100%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">当日</span>
+        <span>連絡の有無にかかわらず100%</span>
+      </div>
+
+      <h3>予約変更</h3>
+      <div class="info-row">
+        <span class="info-label">2日前以降</span>
+        <span>00:00以降は100%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">前日以降</span>
+        <span>00:00以降は100%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">当日</span>
+        <span>連絡の有無にかかわらず100%</span>
+      </div>
+
+      <p class="small-note">
+        ※7日前より50%のキャンセル料が発生します。<br>
+        ※コース・プランに個別のキャンセルポリシーがある場合は、そちらが優先されます。
+      </p>
+    </section>
+
+    <!-- アクセス・地図 -->
+    <section class="location" id="location">
+      <p class="section-label">ACCESS</p>
+      <h2 data-ja="アクセス" data-en="Location">アクセス</h2>
+
+      <p>三重県伊勢市一之木2-5-10</p>
+      <p>伊勢市駅から徒歩8分</p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.325878979663!2d136.7033260755145!3d34.49462177299361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60045af4476262ad%3A0x2a3f85bccb2ead4f!2z54S86bOl44Gr44GL44KP!5e0!3m2!1sja!2suk!4v1791552093430!5m2!1sja!2suk"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </section>
+
+    <!-- 予約エリア -->
+    <section class="booking-section" id="reservation-options">
+      <p class="section-label">RESERVATION</p>
+      <h2>ご予約・お問い合わせ</h2>
+
+      <p>お電話でのご予約・お問い合わせはこちら</p>
+      <a href="tel:0596222336" class="reservation-button">
+        0596-22-2336
+      </a>
+
+      <p class="booking-heading">Web予約はこちらから</p>
+      <p>ご希望の予約サイトをお選びください。</p>
+
+      <a
+        href="https://tabelog.com/mie/A2403/A240301/24019007/"
+        class="reservation-button"
+        target="_blank"
+        rel="noopener noreferrer">
+        食べログから予約
+      </a>
+
+      <a
+        href="https://restaurant.ikyu.com/123677"
+        class="reservation-button"
+        target="_blank"
+        rel="noopener noreferrer">
+        一休から予約
+      </a>
+    </section>
+
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <p>
+    <span data-ja="焼鳥 にかわ" data-en="Yakitori Nikawa">焼鳥 にかわ</span>
+  </p>
+  <small>&copy; Yakitori Nikawa. All Rights Reserved.</small>
+</footer>
+
+<script>
+  const languageButtons = document.querySelectorAll(".language-button");
+
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.lang;
+
+      document.querySelectorAll("[data-ja][data-en]").forEach((element) => {
+        element.textContent =
+          language === "en" ? element.dataset.en : element.dataset.ja;
+      });
+
+      languageButtons.forEach((item) => {
+        item.classList.toggle("active", item === button);
+      });
+
+      document.documentElement.lang = language;
+    });
+  });
+</script>
+
 </body>
 </html>

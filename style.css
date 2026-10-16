@@ -1,44 +1,56 @@
+
+:root {
+  --color-bg: #171715;
+  --color-gold: #C5A46D;
+  --color-text: #F4F0E8;
+}
+
+
 h1 {
-  color: darkred;
-  font-size: 40px;
-  letter-spacing: 4px;
+  color: var(--color-gold);
+  font-size: 48px;
+  letter-spacing: 6px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 body {
-  background-color: lightyellow;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   text-align: center;
-  padding: 40px;
-  font-family: sans-serif;
+  padding: 40px 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  line-height: 1.9;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
-  background-color: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  padding: 40px 0px;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 
 .reservation-button {
   display: inline-block;
-  background-color: darkred;
-  color: white;
-  padding: 12px 24px;
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+  padding: 14px 32px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-top: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: background-color 0.3s;
 }
 
 .reservation-button:hover {
-  background-color: black;
+  background-color: var(--color-text);
 }
 
 .map {
@@ -51,4 +63,602 @@ p {
 .container iframe {
   max-width: 100%;
   border: 0;
+}
+
+/* トップ画面 */
+
+.hero {
+  width: 100%;
+  min-height: 600px;
+  padding: 80px 20px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("image/coocking%20yakitori.png") center / cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 英語の小さなラベル */
+.hero-label {
+  color: var(--color-gold);
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+/* キャッチコピー */
+.hero-copy {
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-top: 30px;
+}
+
+/* 説明文 */
+.hero-description {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+/* 店名の下のアクセントライン */
+.hero h1 {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin: 20px auto 0;
+}
+
+
+/* コンセプトセクション */
+
+.concept {
+  max-width: none;
+  width: 100%;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 100px 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  text-align: right;
+
+  
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(23, 23, 21, 0.15) 20%,
+      rgba(23, 23, 21, 0.75) 55%,
+      rgba(0, 0, 0, 0.98) 100%
+    ),
+    url("image/1yakitori pic2.jpg");
+
+  background-size: cover;
+  background-position: 180% center;
+    background-repeat: no-repeat;
+}
+
+/* セクションの英語ラベル */
+.section-label {
+  color: var(--color-gold);
+  font-size: 15px;
+  letter-spacing: 5px;
+  margin-bottom: 28px;
+}
+
+/* コンセプトの見出し */
+.concept h2 {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+
+/* コンセプトの説明文 */
+.concept-text {
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 2.2;
+  letter-spacing: 1px;
+}
+
+/* ヘッダー全体 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 40px;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid rgba(197, 164, 109, 0.35);
+  flex-wrap: nowrap;
+}
+
+/* お店のロゴ */
+.site-logo {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+/* ナビゲーションメニュー */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* メニューのリンク */
+.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.site-nav a:hover {
+  color: var(--color-gold);
+}
+
+/* お問い合わせボタン */
+.header-reservation {
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  padding: 10px 18px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.header-reservation:hover {
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+}
+
+/* メニューをクリックしたときの移動位置 */
+
+#concept, #menu, #space, #access, #reservation-options {
+  scroll-margin-top: 100px;
+}
+
+
+
+/* 店舗情報・メニュー・アクセスの基本設定 */
+.access,
+.menu,
+.location {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* 新しい店舗情報レイアウト */
+.restaurant-details {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: var(--color-bg);
+  box-sizing: border-box;
+}
+
+.details-photo {
+  position: sticky;
+  top: 0;
+  flex: 0 0 45%;
+  height: 100vh;
+  background-image: url("image/outside.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.details-content {
+  flex: 1;
+  min-width: 0;
+  padding: 50px 35px;
+  box-sizing: border-box;
+}
+
+.restaurant-details .access-info,
+.restaurant-details .cancellation,
+.restaurant-details .location,
+.restaurant-details .booking-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: left;
+}
+
+.restaurant-details h2 {
+  margin-bottom: 25px;
+  color: var(--color-text);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.restaurant-details h3 {
+  margin-top: 30px;
+  color: var(--color-gold);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.restaurant-details .info-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: none;
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(197, 164, 109, 0.25);
+  text-align: left;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.restaurant-details .info-label {
+  flex: 0 0 100px;
+  color: var(--color-gold);
+}
+
+.restaurant-details .info-row a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.restaurant-details .info-row a:hover {
+  color: var(--color-gold);
+}
+
+.restaurant-details .small-note {
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.restaurant-details .location iframe {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.restaurant-details .booking-section {
+  border-top: 1px solid rgba(197, 164, 109, 0.35);
+  text-align: center;
+}
+
+.restaurant-details .booking-section p {
+  margin: 15px 0;
+}
+
+.restaurant-details .booking-heading {
+  margin-top: 35px;
+  color: var(--color-gold);
+  font-size: 18px;
+}
+
+.restaurant-details .reservation-button {
+  display: block;
+  max-width: 320px;
+  margin: 12px auto;
+  padding: 14px 20px;
+  border: 1px solid var(--color-gold);
+  color: var(--color-text);
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.restaurant-details .reservation-button:hover {
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+}
+
+/* スマートフォンでは写真と情報を縦に並べる */
+@media (max-width: 768px) {
+  .restaurant-details {
+    display: block;
+  }
+
+  .details-photo {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    min-height: 280px;
+  }
+
+  .details-content {
+    padding: 25px 20px;
+  }
+
+  .restaurant-details .access-info,
+  .restaurant-details .cancellation,
+  .restaurant-details .location,
+  .restaurant-details .booking-section {
+    padding: 30px 0;
+  }
+
+  .restaurant-details .info-row {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .restaurant-details .info-label {
+    flex-basis: 85px;
+  }
+}
+
+
+/* 各セクションの見出し */
+.access h2,
+.menu h2,
+.location h2,
+.space h2 {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+/* お品書き */
+.menu-course {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+/* コース料金 */
+.menu-price {
+  color: var(--color-gold);
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* 料金についての補足 */
+.menu-note {
+  color: rgba(244, 240, 232, 0.65);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* 店舗情報の各行 */
+.info-row {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 18px 10px;
+  border-bottom: 1px solid rgba(197, 164, 109, 0.25);
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* 店舗情報の項目名 */
+.info-label {
+  flex: 0 0 80px;
+  color: var(--color-gold);
+}
+
+/* 電話番号のリンク */
+.info-row a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.info-row a:hover {
+  color: var(--color-gold);
+}
+
+/* スマートフォン向けレイアウト */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 12px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .header-reservation {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 13px;
+}
+
+  .hero {
+    min-height: 480px;
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .hero-copy {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .concept h2,
+  .access h2,
+  .menu h2,
+  .space h2,
+  .location h2 {
+    font-size: 23px;
+  }
+
+  .info-row {
+    gap: 12px;
+    font-size: 13px;
+  }
+}
+
+
+/* 店内セクション */
+.space {
+  width: 100%;
+  max-width: none;
+  min-height: 600px;
+  margin: 0;
+  padding: 100px 40px;
+  box-sizing: border-box;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("image/new%20inside.png") center / cover no-repeat;
+}
+
+
+/* 店内の説明文 */
+.space-text {
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-size: 15px;
+  line-height: 2.2;
+  letter-spacing: 1px;
+}
+
+/* 店内セクションの背景 */
+.space {
+  background-color: #201F1B;
+}
+
+/* セクションの境目をゆったり見せる */
+.concept,
+.space {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.reservation-options {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.reservation-options p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.reservation-options .reservation-button {
+  width: 240px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-align: center;
+}
+
+.site-footer {
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(197, 164, 109, 0.3);
+  text-align: center;
+}
+
+.site-footer p {
+  color: var(--color-gold);
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.site-footer small {
+  color: rgba(244, 240, 232, 0.55);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: rgba(244, 240, 232, 0.5);
+}
+
+.language-button {
+  background: transparent;
+  border: none;
+  padding: 6px 2px;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.language-button.active {
+  color: var(--color-gold);
+}
+
+.language-button:hover {
+  color: var(--color-gold);
+}
+
+/* 店名を白文字にする */
+.site-logo,
+.hero h1,
+.site-footer > p {
+  color: #FFFFFF;
 }
