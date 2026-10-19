@@ -662,3 +662,29 @@ p {
 .site-footer > p {
   color: #FFFFFF;
 }
+
+/* Instagramアイコン */
+.site-nav .instagram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: var(--color-gold);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.site-nav .instagram-link:hover {
+  color: var(--color-text);
+  transform: scale(1.08);
+}
+
+.site-nav .instagram-link img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
